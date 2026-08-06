@@ -85,6 +85,49 @@
     .masthead .byline-strip span { display: inline-flex; align-items: center; gap: 8px; }
     .masthead .byline-strip span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
     .masthead .byline-strip span:first-child::before { display: none; }
+    .masthead-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.masthead-copy {
+  min-width: 0;
+}
+
+.masthead-photo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masthead-photo {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 3px solid #ffffff;
+}
+
+@media (max-width: 760px) {
+  .masthead-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .masthead-photo {
+    max-width: 240px;
+  }
+
+  .masthead-photo-wrap {
+    order: -1;
+  }
+}
+
 
     .cta-row { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
     .btn { display: inline-block; padding: 12px 22px; border-radius: 6px; font-weight: 600; font-size: 15px; border: 1px solid transparent; transition: all 0.15s ease; }
